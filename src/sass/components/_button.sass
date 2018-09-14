@@ -16,11 +16,7 @@ $btn-border-style: solid
 
 // 1 key - background
 // 2 key - text color
-$btn-static: ("white": ($color-white, $color-brand-1), "brand-1": ($color-brand-1, $color-white), "brand-2": ($color-brand-2, $color-white))
-
-// 1 key - border-color
-// 2 key - text color
-$btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
+$btn-static: ("white": ($color-white, $color-brand-7), "brand-7": ($color-brand-7, $color-white), "brand-8": ($color-brand-8, $color-white))
 
 .btn
 	+btn()
@@ -32,20 +28,8 @@ $btn-border: ("brand-1": ($color-brand-1, $color-brand-1))
 	&_lg
 		+btn-size($btn-large-padding, $btn-large-font-size)
 
-	&_shadow
-		&-brand-1
-			box-shadow: 0 3px 8px 1px transparentize($color-brand-1, 0.5)
-
-		&:hover
-			box-shadow: none
-
 	//-
 	//- Iteration button fluid color
 	//-
 
 	+btn-static-iteration()
-
-	//-
-	//- Iteration button border-color
-	//-
-	+btn-border-iteration()
