@@ -1,8 +1,10 @@
 {% import 'macros/macros.base.twig' as macros %}
+{% import "macros/macros.landing.twig" as landing %}
+
 {% extends 'layouts/base.twig' %}
 
 {% block meta %}
-	{% set title = 'Как повысить самооценку?' %}
+	{% set title = 'Почему я живу посценарию и моиотношенияс мужчинамикраткосрочны??' %}
 	{% set description = 'Зарегистрируйтесь на бесплатный онлайн вебинар' %}
 	{% set image = 'img/logo-7.png' %}
 	{% set url = 'url' %}
@@ -14,8 +16,17 @@
 {% endblock %}
 
 {% block content %}
-	{% include 'pages/7/content.twig' %}
-{% endblock %}
-
-{% block footer %}
+	{% set brand = 7 %}
+	{{
+		landing.landing(
+			{
+				"brand": brand,
+				"image": "img/bg-#{brand}.jpg",
+				"logo": "img/logo-#{brand}.png",
+				"date": "17 сентября 2018 / 20:00",
+				"title": "Почему я живу по<br>сценарию и мои<br>отношения<br>с мужчинами<br>краткосрочны??",
+				"form": form
+			}
+		)
+	}}
 {% endblock %}
