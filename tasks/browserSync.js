@@ -23,7 +23,7 @@ export function serve(done) {
 	global.watch = true;
 
 	server.init({
-		proxy: 'twig-starter.template',
+		proxy: 'ulitin.webinar',
 		notify: false
 	});
 
