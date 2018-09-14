@@ -1,6 +1,6 @@
 // Button default
 $btn-padding: 10px 16px
-$btn-font-size: 14px
+$btn-font-size: 15px
 
 // Button large
 $btn-large-padding: 15px 25px
@@ -21,12 +21,18 @@ $btn-static: ("white": ($color-white, $color-brand-7), "brand-7": ($color-brand-
 .btn
 	+btn()
 	+btn-size($btn-padding, $btn-font-size)
+	border-radius: 30px
+
+	
 
 	&-group &
 		margin: 5px
 
 	&_lg
 		+btn-size($btn-large-padding, $btn-large-font-size)
+
+		+min(md)
+			+btn-size(15px 35px, 16px)
 
 	//-
 	//- Iteration button fluid color
