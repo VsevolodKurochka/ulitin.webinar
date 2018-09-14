@@ -1,14 +1,15 @@
 {% import 'macros/macros.base.twig' as macros %}
 {% import "macros/macros.landing.twig" as landing %}
+{% set brand = 10 %}
+{% set title = "Как<br>вернуть мужа<br>в семью?" %}
 
 {% extends 'layouts/base.twig' %}
 
 {% block meta %}
-	{% set title = 'Почему я живу посценарию и моиотношенияс мужчинамикраткосрочны??' %}
 	{% set description = 'Зарегистрируйтесь на бесплатный онлайн вебинар' %}
-	{% set image = 'img/logo-7.png' %}
+	{% set image = "img/logo-#{brand}.png" %}
 	{% set url = 'url' %}
-	{{ macros.meta(title, description, image, url) }}
+	{{ macros.meta(title|striptags, description, image, url) }}
 {% endblock %}
 
 {% block css %}
@@ -16,15 +17,15 @@
 {% endblock %}
 
 {% block content %}
-	{% set brand = 7 %}
+	
 	{{
 		landing.landing(
 			{
 				"brand": brand,
 				"image": "img/bg-#{brand}.jpg",
 				"logo": "img/logo-#{brand}.png",
-				"date": "17 сентября 2018 / 20:00",
-				"title": "Почему я живу по<br>сценарию и мои<br>отношения<br>с мужчинами<br>краткосрочны??",
+				"date": "20 сентября 2018 / 20:00",
+				"title": title,
 				"form": form
 			}
 		)
