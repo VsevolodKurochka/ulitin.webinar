@@ -16,7 +16,8 @@
 
 	&__content
 		+min(md)
-			padding-left: 45px
+			padding-left: 2%
+			padding-top: 2%
 			flex-basis: 35%
 
 	&__header
@@ -32,3 +33,18 @@
 			font-size: 16px
 			line-height: 1
 			+font('b')
+
+	&__body
+		&-title
+			text-transform: uppercase
+			line-height: 1.1
+			+font('b')
+
+			+min(md)
+				font-size: 2.85vmax
+				+margin-y(3vw, 3.5vw)
+
+		&-subtitle
+			line-height: 1.1
+			+min(md)
+				font-size: 1.57vmax
