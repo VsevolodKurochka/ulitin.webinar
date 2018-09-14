@@ -1,13 +1,13 @@
 {% import 'macros/macros.base.twig' as macros %}
 {% import "macros/macros.landing.twig" as landing %}
-{% set brand = 7 %}
-{% set title = "Почему я живу по<br>сценарию и мои<br>отношения<br>с мужчинами<br>краткосрочны??" %}
+{% set brand = 8 %}
+{% set title = "Сожительство,<br>что мешает<br>создать семью?" %}
 
 {% extends 'layouts/base.twig' %}
 
 {% block meta %}
 	{% set description = 'Зарегистрируйтесь на бесплатный онлайн вебинар' %}
-	{% set image = 'img/logo-#{brand}.png' %}
+	{% set image = "img/logo-#{brand}.png" %}
 	{% set url = 'url' %}
 	{{ macros.meta(title|striptags, description, image, url) }}
 {% endblock %}
@@ -24,7 +24,7 @@
 				"brand": brand,
 				"image": "img/bg-#{brand}.jpg",
 				"logo": "img/logo-#{brand}.png",
-				"date": "17 сентября 2018 / 20:00",
+				"date": "18 сентября 2018 / 20:00",
 				"title": title,
 				"form": form
 			}
