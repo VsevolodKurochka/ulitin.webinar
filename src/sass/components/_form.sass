@@ -28,11 +28,20 @@ $themeFormDesign: "new"
 			&__submit
 				+size(100%)
 
+	&__label
+		display: block
+		font-size: 14px
+		padding-left: 20px
+		+font('l')
+		margin-bottom: 5px
+
 	&__control
 		+input-default()
 		padding: 15px
-		border: none
+		border: 1px solid rgb(239, 240, 241)
+		border-radius: 10px
 
 		&:focus
+			border-color: darken(rgb(239, 240, 241), 20%)
 			+placeholder()
 				color: transparent
