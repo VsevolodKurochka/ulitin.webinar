@@ -1,5 +1,31 @@
-{% macro button(type, class, text, attributes) %}
-	{% import "macros/macros.form.twig" as form %}
-	{% set default = "btn btn_brand-1 effect effect_bounce-top" %}
-	{{form.button('button', "#{default} #{class}", text, attributes)}}
+{% macro landing(info) %}
+	{% import "macros/macros.form.twig" as macrosForm %}
+	<section class="landing">
+		<div class="landing__image">
+			<img src="{{info.image}}" alt="{{info.title|striptags}}">
+		</div>
+		<div class="landing__content">
+			<div class="landing__header">
+				<img src="{{info.logo}}" alt="{{info.title|striptags}}" class="landing__header-logo">
+				<p class="landing__header-date">{{info.date}}</p>
+			</div>
+			<div class="landing__body">
+				<h1 class="landing__body-title">{{info.title|raw}}</h1>
+				<p class="landing__body-subtitle">Зарегистрируйтесь на <span class="b color-brand-{{info.brand}}">бесплатный</span><br> онлайн вебинар</p>
+				<form action="#" class="form form_block" method="POST">
+					<div class="form__content">
+						{% for input in info.form %}
+							<div class="form__row">
+								<label for="{{input.name}}" class="form__label">{{input.label}}</label>
+								{{ macrosForm.input(input.name, input.value, input.type, input.attributes) }}
+							</div>
+						{% endfor %}
+						<div class="form__row">
+							{{ macrosForm.button("submit", "form__submit btn btn_lg btn_brand-#{info.brand} effect effect_bounce-top", "Зарегистрироваться") }}
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 {% endmacro %}
