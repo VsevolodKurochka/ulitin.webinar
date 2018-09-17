@@ -1,7 +1,7 @@
 <?php
 	$form = array(
 		array(
-			'name'	=> 'name',
+			'name'	=> 'first_name',
 			'value'	=> '',
 			'type'	=> 'text',
 			'label'	=> 'Имя',
@@ -21,7 +21,7 @@
 			)
 		),
 		array(
-			'name'	=> 'phone',
+			'name'	=> 'custom_phone',
 			'value'	=> '',
 			'type'	=> 'phone',
 			'label'	=> 'Телефон',
