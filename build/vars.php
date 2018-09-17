@@ -7,7 +7,8 @@
 			'label'	=> 'Имя',
 			'attributes' 			=> array(
 				'placeholder' 	=> 'Введите ваше имя',
-				'class' 				=> 'form__control'
+				'class' 				=> 'form__control',
+				'required'			=> 'required'
 			)
 		),
 		array(
@@ -17,11 +18,12 @@
 			'label'	=> 'Email',
 			'attributes' 			=> array(
 				'placeholder' 	=> 'Введите вашу почту',
-				'class' 				=> 'form__control'
+				'class' 				=> 'form__control',
+				'required'			=> 'required'
 			)
 		),
 		array(
-			'name'	=> 'custom_phone',
+			'name'	=> 'custom_mobile_phone',
 			'value'	=> '',
 			'type'	=> 'phone',
 			'label'	=> 'Телефон',

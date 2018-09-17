@@ -16,6 +16,11 @@
 	{{ macros.css('css/style.min.css') }}
 {% endblock %}
 
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/jquery.main.js') }}
+{% endblock %}
+
 {% block content %}
 	
 	{{
