@@ -12,7 +12,8 @@
 			<div class="landing__body">
 				<h1 class="landing__body-title">{{info.title|raw}}</h1>
 				<p class="landing__body-subtitle">Зарегистрируйтесь на <span class="b color-brand-{{info.brand}}">бесплатный</span><br> онлайн вебинар</p>
-				<form action="#" class="form form_block" method="POST">
+				<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" class="form form_block" method="POST">
+					<input type="hidden" name="campaign_token" value="{{info.campaign_token}}" />
 					<div class="form__content">
 						{% for input in info.form %}
 							<div class="form__row">
