@@ -7,7 +7,7 @@
 
 {% block meta %}
 	{% set description = 'Зарегистрируйтесь на бесплатный онлайн вебинар' %}
-	{% set image = 'img/logo-#{brand}.png' %}
+	{% set image = "img/logo-#{brand}.png" %}
 	{% set url = "http://promo.markbarton.ru/mk/#{brand}" %}
 	{{ macros.meta(title|striptags, description, image, url) }}
 {% endblock %}
