@@ -1,0 +1,40 @@
+{% import 'macros/macros.base.twig' as macros %}
+{% import "macros/macros.landing.twig" as landing %}
+{% set brand = 5 %}
+{% set title = "ТОП – 5<br>женских<br>ошибок!" %}
+
+{% extends 'layouts/base.twig' %}
+
+{% block meta %}
+	{% set description = 'Зарегистрируйтесь на бесплатный онлайн вебинар' %}
+	{% set image = "img/logo-#{brand}.png" %}
+	{% set url = 'url' %}
+	{{ macros.meta(title|striptags, description, image, url) }}
+{% endblock %}
+
+{% block css %}
+	{{ macros.css('css/style.min.css') }}
+{% endblock %}
+
+{% block js %}
+	{{ macros.js('js/libs.min.js') }}
+	{{ macros.js('js/jquery.main.js') }}
+{% endblock %}
+
+{% block content %}
+	
+	{{
+		landing.landing(
+			{
+				"brand": brand,
+				"image": "img/bg-#{brand}.jpg",
+				"logo": "img/logo-#{brand}.png",
+				"date": "19 сентября 2018 / 20:00",
+				"title": title,
+				"form": form,
+				"campaign_token": "n0wHY",
+				"thankyou_url": "http://promo.markbarton.ru/mk/5/thx",
+			}
+		)
+	}}
+{% endblock %}
